@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foxbit-api-calc
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: foxbit-api-calc
+  template:
+    metadata:
+      labels:
+        app: foxbit-api-calc
+    spec:
+      containers:
+      - name: foxbit-api-calc
+        image: aldry1303/foxbit-api-calc:1.0.0
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health/liveness
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health/readiness
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
