@@ -36,10 +36,10 @@ Localmente, podemos testar todos os endpoints documentados abaixo.
 
 | Método | Endpoint   | Parâmetros             | Descrição       | Exemplo                                                |
 | ------ | ---------- | ---------------------- | --------------- | ------------------------------------------------------ |
-| GET    | `/api/sum` | `term_one`, `term_two` | Soma os valores | `/api/sum?term_one=10&term_two=5` → `{"resultado":15}` |
-| GET    | `/api/sub` | `term_one`, `term_two` | Subtração       | `/api/sub?term_one=10&term_two=5` → `{"resultado":5}`  |
-| GET    | `/api/mul` | `term_one`, `term_two` | Multiplicação   | `/api/mul?term_one=10&term_two=5` → `{"resultado":50}` |
-| GET    | `/api/div` | `term_one`, `term_two` | Divisão         | `/api/div?term_one=10&term_two=5` → `{"resultado":2}`  |
+| GET    | `/api/sum` | `term_one`, `term_two` | Soma os valores | `/api/sum?term_one=10&term_two=5` → `{"result":15}` |
+| GET    | `/api/sub` | `term_one`, `term_two` | Subtração       | `/api/sub?term_one=10&term_two=5` → `{"result":5}`  |
+| GET    | `/api/mul` | `term_one`, `term_two` | Multiplicação   | `/api/mul?term_one=10&term_two=5` → `{"result":50}` |
+| GET    | `/api/div` | `term_one`, `term_two` | Divisão         | `/api/div?term_one=10&term_two=5` → `{"result":2}`  |
 
 > ⚠️ Divisão por zero retorna erro:
 > `{"error":"divisão por zero não permitida"}`
