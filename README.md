@@ -64,12 +64,21 @@ Os manifestos contêm:
 
 ### Comandos úteis:
 
+Para aplicar e visualizar os recursos:
+
 ```bash
 kubectl apply -f ./k8s 
 kubectl get pods
 kubectl get service
+kubectl get deployment
 kubectl port-forward svc/foxbit-api-calc-service 8000:8000
 ```
+ Para remover:
+
+```bash
+kubectl delete -f ./k8s 
+```
+
 
 Após o port-forward, é possível consumir os endpoints localmente via browser ou `curl`.
 
