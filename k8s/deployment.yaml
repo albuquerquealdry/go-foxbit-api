@@ -17,7 +17,7 @@ spec:
       - name: foxbit-api-calc
         image: aldry1303/foxbit-api-calc:1.0.0
         ports:
-        - containerPort: 8080
+        - containerPort: 8000
         resources:
           requests:
             memory: "128Mi"
